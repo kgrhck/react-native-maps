@@ -1,16 +1,16 @@
 {
-  "name": "react-native-maps",
+  "name": "@kgrhck/react-native-maps",
   "description": "React Native Mapview component for iOS + Android",
   "main": "index.js",
-  "author": "Leland Richardson <leland.m.richardson@gmail.com>",
-  "version": "0.28.0",
+  "author": "Clement TISON <tsn.clement@gmail.com>",
+  "version": "0.28.1",
   "scripts": {
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "ci": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-maps/react-native-maps"
+    "url": "https://github.com/kgrhck/react-native-maps"
   },
   "keywords": [
     "react",

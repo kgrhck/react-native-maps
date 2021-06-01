@@ -46,24 +46,12 @@ declare module 'react-native-maps' {
     y: number;
   }
 
-  export type EventActionType =
-    | 'marker-press'
-    | 'polygon-press'
-    | 'polyline-press'
-    | 'callout-press'
-    | 'press'
-    | 'long-press'
-    | 'overlay-press'
-    | undefined;
-
   // helper interface
   export interface MapEvent<T = {}>
     extends NativeSyntheticEvent<
       T & {
         coordinate: LatLng;
         position: Point;
-        action: EventActionType;
-        id?: string;
       }
     > {}
 
@@ -544,6 +532,7 @@ declare module 'react-native-maps' {
   export interface MapOverlayProps extends ViewProperties {
     image?: ImageURISource | ImageRequireSource;
     bounds: [Coordinate, Coordinate];
+    opacity?: number;
     bearing?: number;
     tappable?: boolean;
     onPress?: (event: MapEvent<{ action: 'overlay-press' }>) => void;
@@ -571,7 +560,7 @@ declare module 'react-native-maps' {
       colorMapSize: number;
     };
     radius?: number;
-    opacity?: number;
+    opacity: number;
   }
 
   export class Heatmap extends React.Component<MapHeatmapProps, any> {}
